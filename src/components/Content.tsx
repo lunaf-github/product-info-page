@@ -1,12 +1,15 @@
 import React from "react";
-import Header from "./Header";
+import Chart from "./Chart";
+import Table from "./Table";
+import Product from "./Product";
 
 const Content = () => {
+
     return (
         <>
-            <aside className="product-container">Side</aside>
-            <section className="chart-container">Graph</section>
-            <section className="table-container">Table</section>
+            <Product />
+            <Chart />
+            <Table />
         </>
     );
 }
