@@ -4,7 +4,7 @@
     --header-min-height: 80px;
     --chart-min-height: 600px;
     --table-min-height: 700px;
-      /* Color Variables */
+    /* Color Variables */
   --light-gray: #f7f8fa;
   --gray: gray;
   --container-background-color: white;
@@ -14,11 +14,31 @@
   --border-horiz-width: 55px;
   --thin-vertical-border: var(--border-vertical-width) solid var(--light-gray);
   --thick-vertical-border: var(--border-double-vertical-width) solid
-    var(--light-gray);
+  var(--light-gray);
   --horizontal-border: var(--border-horiz-width) solid var(--light-gray);
-  /* The hexes of the blue variables are used in the chart */
-  /* --dark-blue: #3c4858;
-  --bright-blue: #40a8ef;  */
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    height: 100vh;
+}
+
+#root {
+    height: 100%;
+}
+
+svg {
+    height: 100%;
+}
+
+.logo {
+    height: 70%;
 }
 
 .chart-container {
@@ -71,25 +91,6 @@
     border-bottom: var(--horizontal-border);
   }
 
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
 
-svg {
-    height: 100%;
-}
 
-body {
-    min-height: 100vh;
-    height: 100vh;
-}
-
-#root {
-    height: 100%;
-}
-
-.logo {
-    height: 70%;
-}
 

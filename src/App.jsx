@@ -4,10 +4,9 @@ import Content from "./components/Content";
 
 const App = () => {
     return (
-        <div id="app">
-
+        <div className="grid-container">
+            <Header />
             <Content />
-
         </div>
     );
 }
