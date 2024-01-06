@@ -1,0 +1,36 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 1fr; /* Set the first column to 25% of the viewport width */
+    grid-template-rows: 60% 100%; /* Set the first row to 60% of the viewport height and the second to 40% */
+    gap: 10px; /* Adjust the gap between grid items as needed */
+    height: 100vh; /* Set the grid-container to 100% of the viewport height */
+  }
+
+  .product-container {
+    grid-column: 1 / span 1; /* Make it span 1 column */
+    grid-row: 1 / span 2; /* Make it span 2 rows */
+    background-color: #3498db; /* Adjust the background color as needed */
+    padding: 20px; /* Adjust padding as needed */
+    color: white; /* Adjust text color as needed */
+  }
+
+  .data-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Set the right-container to 100% of the viewport height */
+  }
+
+  .chart-container {
+    flex: 60; /* Make the upper-rectangular take 60% of the available vertical space */
+    background-color: #2ecc71; /* Adjust the background color as needed */
+    padding: 10px; /* Adjust padding as needed */
+    margin-bottom: 10px; /* Adjust margin as needed */
+    color: white; /* Adjust text color as needed */
+  }
+
+  .table-container {
+    flex: 30; /* Make the lower-rectangular take 40% of the available vertical space */
+    background-color: #e74c3c; /* Adjust the background color as needed */
+    padding: 10px; /* Adjust padding as needed */
+    color: white; /* Adjust text color as needed */
+  }

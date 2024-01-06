@@ -1,16 +1,13 @@
 import React from "react";
+import Header from "./components/Header";
+import Content from "./components/Content";
 
 const App = () => {
     return (
         <div id="app">
-            <nav>Nav</nav>
-            <main>
-                <aside>Side</aside>
-                <article>
-                    <section>Graph</section>
-                    <section>Table</section>
-                </article>
-            </main>
+
+            <Content />
+
         </div>
     );
 }
