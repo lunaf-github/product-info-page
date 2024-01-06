@@ -1,0 +1,30 @@
+Set up Environment (Done)
+Change CSS style defaults (Done)
+Layout App with semantic html
+Convert break initial layout to components while keeping same structure
+Determine data visualization library to use
+
+Work on Components - initial static layout (no data yet)
+    - Header Component 
+    - Side bar Component
+    - Chart Component
+    - Table Component
+
+Determine App level state
+Set up Redux
+
+Add dynamic functionality - Pass data into Components
+    - Header Component 
+        -tests covered
+    - Side bar Component
+        -tests covered
+    - Chart Component
+        -tests covered
+    - Table Component
+        -tests covered
+
+Styling -  Touch Ups
+    - All Components match color scheme from mockup
+    - Table drop down arrows
+    - Line graph colors 
+    - Box shadows
