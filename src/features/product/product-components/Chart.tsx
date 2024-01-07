@@ -1,5 +1,5 @@
 import React from 'react';
-import JSONData from  '../../data/data.json';
+import JSONData from  '../../../../data/data.json';
 import {
     LineChart,
     Line,

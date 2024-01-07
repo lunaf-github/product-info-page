@@ -1,17 +1,33 @@
 Set up Environment (Done)
 Change CSS style defaults (Done)
-Layout App with semantic html
-Convert break initial layout to components while keeping same structure
-Determine data visualization library to use
+Layout App with semantic html (Done)
+Convert break initial layout to components while keeping same structure (Done)
+Determine data visualization library to use (Done)
+
+Features:
+- Chart
+- Table
+- Product info
 
 Work on Components - initial static layout (no data yet)
-    - Header Component 
-    - Side bar Component
-    - Chart Component
-    - Table Component
+    - Header Component  (Done)
+    - Side bar Component (Done)
+    - Chart Component (Done)
+    - Table Component (Done)
 
-Determine App level state
-Set up Redux
+Design State Values (Done)
+  1. Data from json file - (Global state)
+  2. Filter values (Local state)
+
+
+Design Redux actions
+  1. 
+
+Set up Redux Tool Kit 
+   Notes: 
+   Redux is not necessary for an application this size, but I'll still add it to showcase my redux best practices
+   (Not sure what version is prefered, but for now I'll use the redux recommended approach)
+
 
 Add dynamic functionality - Pass data into Components
     - Header Component 

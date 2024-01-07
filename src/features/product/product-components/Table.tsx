@@ -1,15 +1,15 @@
 
 import React from 'react';
-import JSONData from '../../data/data.json';
+import JSONData from '../../../../data/data.json';
 
 const Table = () => {
 
 
     const data = JSONData[0].sales
 
-    const rows = data.map(row => {
+    const rows = data.map((row, i) => {
         return (
-            <tr>
+            <tr key={`row-${i}`}>
               <td>{row.weekEnding.toLocaleString()}</td>
               <td>{"$" + row.retailSales.toLocaleString()}</td>
               <td>{"$" + row.wholesaleSales.toLocaleString()}</td>

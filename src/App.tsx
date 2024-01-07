@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
-import Header from "./components/Header";
-import Content from "./components/Content";
+import Header from "./features/product/product-components/Header";
+import Content from "./features/product/product-components/Content";
 import mockFetch from "./utils/mockFetch";
+import server from "./utils/mockFetch";
 
 
 
 const App = () => {
 
-    const [data, setData] = useState<any>(null);
 
     useEffect(() => {
-        mockFetch('https://someapiurl.com/api/salesinfomock')
-            .then(res => setData(res))
+        // mockFetch('https://someapiurl.com/api/salesinfomock')
     }, [])
 
     return (

@@ -1,5 +1,5 @@
 import React from "react";
-import JSONData from '../../data/data.json';
+import JSONData from '../../../../data/data.json';
 
 const Product = () => {
     const data = JSONData[0];
@@ -7,7 +7,7 @@ const Product = () => {
 
     const tags = data.tags? (
         data.tags.map(tag => {
-          return <span className="tags">{tag}</span>;
+          return <span key={tag} className="tags">{tag}</span>;
         })
       ) : (
         <span />
