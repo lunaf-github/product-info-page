@@ -1,33 +1,50 @@
-import React from "react";
-import JSONData from '../../../../data/data.json';
+import React, { useEffect } from "react";
+import { fetchContent } from '../productSlice';
+import { useSelector, useDispatch } from "react-redux";
+import { rootState } from "../types";
+import { Dispatch } from "@reduxjs/toolkit";
+import '../styles.css';
 
 const Product = () => {
-    const data = JSONData[0];
+
+    const dispatch = useDispatch<Dispatch<any>>();
+    const image = useSelector((state: rootState) => state.products.items[0].image)
+    const title = useSelector((state: rootState) => state.products.items[0].title)
+    const subtitle = useSelector((state: rootState) => state.products.items[0].subtitle)
+    const tagList = useSelector((state: rootState) => state.products.items[0].tags)
+    const fetchStatus = useSelector((state: rootState) => state.products.status);
+    const error = useSelector((state: rootState) => state.products.error);
 
 
-    const tags = data.tags? (
-        data.tags.map(tag => {
+    useEffect(() => {dispatch(fetchContent())}, [])
+
+
+    const tags = tagList? (
+        tagList.map(tag => {
           return <span key={tag} className="tags">{tag}</span>;
         })
       ) : (
         <span />
     );
-
-    const alt = data.title
-      ? data.title + " image"
-      : "No image";
-
-
+    
+    const content = (
+        <>
+            <figure>
+                <img src={image} alt={title? title + " image" : "No image"} />
+                <figcaption id="title">{title}</figcaption>
+                <figcaption id="subtitle">{subtitle}</figcaption>
+            </figure>
+            <hr />
+            <div id="spans">{tags}</div>
+            <hr />
+        </>
+    )
+    
     return (
         <div id="product" className="product-container">
-          <figure>
-            <img src={data.image} alt={alt} />
-            <figcaption id="title">{data.title}</figcaption>
-            <figcaption id="subtitle">{data.subtitle}</figcaption>
-          </figure>
-          <hr />
-          <div id="spans">{tags}</div>
-          <hr />
+            <h1>{fetchStatus === 'loading' && '...Loading'}</h1>
+            <h1>{fetchStatus === 'failed' && `Failed to fetch product Info: ${error}`}</h1>
+            {fetchStatus === 'succeeded' && content}
         </div>
     );
 }

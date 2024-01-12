@@ -1,11 +1,12 @@
 
 import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from '../features/product/productSlice';
+import productReducer from '../features/product/productSlice';
 
 const store = configureStore({
     reducer: {
-        products: rootReducer
+        products: productReducer
     }
 });
 
+export type AppDispatch = typeof store.dispatch;
 export default store;

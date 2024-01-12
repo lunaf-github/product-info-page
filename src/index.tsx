@@ -1,6 +1,7 @@
 import React from "react";
 import { createRoot } from 'react-dom/client';
-
+import { Provider } from 'react-redux';
+import store from "./store/store";
 
 import App from "./App";
 import "./styles.css"
@@ -12,8 +13,8 @@ if (domNode) {
     const root = createRoot(domNode);
 
     root.render(
-        // <Provider  store={store}>
+        <Provider  store={store}>
             <App />
-        // </Provider>
+        </Provider>
     );
 }

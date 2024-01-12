@@ -25,13 +25,18 @@ export type SalesData = {
     wholesaleSales: number;
 }
 
+export type rootState = {
+    products: ProductState;
+}
 
 export interface ProductState {
-    status: 'idle' | 'loading'
-    products: Product[]
+    status: 'succeeded' | 'loading' | 'failed';
+    error?: string | undefined;
+    items: Product[];
 }
 
 
 export interface Action {
-    type: string
+    type: string;
+    payload?: any;
 }

@@ -5,8 +5,6 @@ import Product from "./Product";
 
 const Content = () => {
 
-
-
     return (
         <>
             <Product />
