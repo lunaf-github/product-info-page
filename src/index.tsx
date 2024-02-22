@@ -9,12 +9,14 @@ import "./styles.css"
 
 const domNode = document.getElementById('root');
 
-if (domNode) {
-    const root = createRoot(domNode);
 
-    root.render(
+const root = createRoot(domNode!);
+
+root.render(
+    <React.StrictMode>
         <Provider  store={store}>
             <App />
         </Provider>
-    );
-}
+    </React.StrictMode>
+);
+
