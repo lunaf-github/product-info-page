@@ -40,3 +40,8 @@ export interface Action {
     type: string;
     payload?: any;
 }
+
+export type ColumnDetails = {
+    label: string;
+    accessor: keyof SalesData;
+}
