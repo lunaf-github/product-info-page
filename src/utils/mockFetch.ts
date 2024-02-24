@@ -4,7 +4,7 @@ import { Product } from '../features/product/types';
 
 async function mockFetch(fakeUrl: string): Promise<Product[]> {
     return new Promise<Product[]>(res => {
-        setTimeout(() => res(JSONData), 3000);
+        setTimeout(() => res(JSONData), 400);
     })
 }
 
