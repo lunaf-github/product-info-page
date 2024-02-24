@@ -44,4 +44,14 @@ export interface Action {
 export type ColumnDetails = {
     label: string;
     accessor: keyof SalesData;
+    sortable: boolean;
 }
+
+export type TableProps = { 
+    data: SalesData[];
+    columns: ColumnDetails[];
+    fetchStatus: 'loading' | 'failed' | 'succeeded'; 
+    errorMessage: string | undefined ;
+}
+
+export type HandleSortingFunction = (sortField: keyof SalesData, sortOrder: 'asc' | 'desc') => void

@@ -25,6 +25,7 @@ const initialState: ProductState = {
 
 
 export const fetchContent = createAsyncThunk('product/loadContents', async () => {
+    console.log('thunk triggered')
     const productInfo: Product[] = await mockFetch('fakeAPI');
     return productInfo;
 });

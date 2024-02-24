@@ -1,23 +1,16 @@
-import React, { useEffect } from "react";
-import { fetchContent } from '../productSlice';
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import { rootState } from "../types";
-import { Dispatch } from "@reduxjs/toolkit";
 import '../styles.css';
 
 const Product = () => {
 
-    const dispatch = useDispatch<Dispatch<any>>();
     const image = useSelector((state: rootState) => state.products.items[0].image)
     const title = useSelector((state: rootState) => state.products.items[0].title)
     const subtitle = useSelector((state: rootState) => state.products.items[0].subtitle)
     const tagList = useSelector((state: rootState) => state.products.items[0].tags)
     const fetchStatus = useSelector((state: rootState) => state.products.status);
     const error = useSelector((state: rootState) => state.products.error);
-
-
-    useEffect(() => {dispatch(fetchContent())}, [])
-
 
     const tags = tagList? (
         tagList.map(tag => {

@@ -24,11 +24,11 @@ const Chart = () => {
 
     const data = productInfo.sales;
 
-    useEffect(() => {
-        if (fetchStatus === 'succeeded') {
-            dispatch(fetchContent());
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (fetchStatus === 'succeeded') {
+    //         dispatch(fetchContent());
+    //     }
+    // }, [])
 
     return (
         <>

@@ -16,9 +16,7 @@ const TableBody = ({ tableData, columns }: { tableData: SalesData[], columns: Co
                     <tr key={data.weekEnding}>
                         {columns.map(({ accessor }) => {
                             const tData = data[accessor] ? data[accessor] : '--';
-                            if (typeof tData === 'number') {
-                                return <td>{USDollar.format(tData)}</td>
-                            } 
+                            if (typeof tData === 'number') return <td key={accessor}>{USDollar.format(tData)}</td>
                             return <td key={accessor}>{tData.toLocaleString()}</td>
                         })}
                     </tr>
